@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java 8 学习笔记 | 
+	 
+	Rome
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="分享者的blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "demo.wyjsjxh.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Rome</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="https://github.com/xmg520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%BF%B0/">
+										数据结构概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E7%AE%97%E6%B3%95%E9%A2%98/">
+										算法题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Java
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										基础
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/18/02%20Java/%E5%9F%BA%E7%A1%80/Java%208%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+										Java 8 学习笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										手撕SpringBoot
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/02%20Java/%E6%89%8B%E6%92%95SpringBoot/SpringBoot%E6%B3%A8%E9%87%8A%E5%AD%A6%E4%B9%A0/">
+										SpringBoot注释学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/02%20Java/%E6%89%8B%E6%92%95SpringBoot/springboot%E4%BD%BF%E7%94%A8CORS%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+										springboot使用CORS解决跨域问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Python
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Flask
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/03%20Python/Flask/Flask+Echarts%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96(%E4%B8%80)/">
+										Flask+Echarts实现数据可视化(一)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/03%20Python/%E5%9F%BA%E7%A1%80/Python%E4%B8%AD%E7%9A%84Base64%E7%BC%96%E7%A0%81%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">
+										Python中的Base64编码的加密与解密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 前端
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Vue
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/04%20%E5%89%8D%E7%AB%AF/Vue/Axios%E8%AF%B7%E6%B1%82SpringBoot%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E9%94%99%E8%AF%AF/">
+										Axios请求SpringBoot后端接口错误
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E5%AE%89Tomcat%E9%95%9C%E5%83%8F/">
+										Docker安Tomcat镜像
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E5%AE%89%E8%A3%85Anaconda3%E5%B9%B6%E5%BC%80%E5%90%AFjupyter%20Notebook/">
+										Docker安装Anaconda3并开启jupyter Notebook
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F/">
+										Docker配置阿里云镜像加速
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Dokcer%E5%AE%89%E8%A3%85Mysql5.7/">
+										Dokcer安装Mysql5.7
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 随笔
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/06%20%E9%9A%8F%E7%AC%94/%E3%80%8A%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E7%9A%84%E4%B8%8D%E5%B9%B8%E3%80%8B-%E7%8E%8B%E5%B0%8F%E6%B3%A2/">
+										《知识分子的不幸》-王小波
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/06%20%E9%9A%8F%E7%AC%94/%E7%8E%B0%E5%9C%A8%E8%B0%88%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8CHadoop%E5%B7%B2%E7%BB%8F%E8%BF%87%E6%97%B6%EF%BC%9F/">
+										现在谈大数据，Hadoop已经过时？
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 面试题与其他
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试题
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%85%B6%E4%BB%96/CSS%E6%96%87%E5%AD%97%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%80%E8%A1%8C%EF%BC%8C%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/">
+										CSS文字只显示一行，超出显示省略号
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%85%B6%E4%BB%96/%E7%96%AF%E7%8B%82%E7%9A%84%E5%B0%8F%E9%B8%9FGreenfoot%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C/">
+										疯狂的小鸟Greenfoot游戏制作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										前端
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF/HTML%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										HTML常见面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Java 8 学习笔记
+</h1>
+<div class="article-meta">
+	
+	<span>Mzx</span>
+	<span>2021-04-18 17:18:01</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h3 id="1-Java-8">1. Java 8</h3>
+<h4 id="1-1-生态">1.1 生态</h4>
+<p>Lambda 表达式<br>
+函数式接口<br>
+方法引用 / 构造器引用<br>
+Stream API<br>
+接口中的默认方法 / 静态方法<br>
+新时间日期 API<br>
+其他新特性</p>
+<h4 id="1-2-新特性">1.2 新特性</h4>
+<p>速度更快<br>
+代码更少<br>
+强大的 Stream API<br>
+便于并行<br>
+最大化减少空指针异常 Optional (Kotlin ?)</p>
+<h4 id="1-3-温故而知新">1.3 温故而知新</h4>
+<p>Hashmap 底层结构/原理</p>
+<p>并发hashmap …</p>
+<p>Java虚拟机 …</p>
+<p>Java内存模型 …</p>
+<h3 id="2-Lambda">2. Lambda</h3>
+<h4 id="2-1-匿名函数">2.1 匿名函数</h4>
+<p>​ Lambda是一个匿名函数，可以理解为一段可以传递的代码（将代码像数据一样传递）；可以写出更简洁、更灵活的代码；作为一种更紧凑的代码风格，是Java语言表达能力得到提升。</p>
+<h4 id="2-2-匿名内部类">2.2 匿名内部类</h4>
+<pre><code>@Test
+public void test01()&#123;
+    //匿名内部类
+    Comparator&lt;Integer&gt; comparator = new Comparator&lt;Integer&gt;() &#123;
+        @Override
+        public int compare(Integer o1, Integer o2) &#123;
+            return Integer.compare(o1,o2);
+        &#125;
+
+        @Override
+        public boolean equals(Object obj) &#123;
+            return false;
+        &#125;
+    &#125;;
+    //调用
+    TreeSet&lt;Integer&gt; set = new TreeSet&lt;&gt;(comparator);
+&#125;
+</code></pre>
+<h4 id="2-3-Lambda">2.3 Lambda</h4>
+<pre><code>@Test
+public void test02()&#123;
+    // Lambda 表达式
+    Comparator&lt;Integer&gt; comparator = (a, b) -&gt; Integer.compare(a, b);
+
+    TreeSet&lt;Integer&gt; set = new TreeSet&lt;&gt;(comparator);
+&#125;
+</code></pre>
+<p>演变过程：</p>
+<pre><code>垃圾代码 --&gt; 策略模式 --&gt; 匿名内部类 --&gt; Lambda表达式
+</code></pre>
+<p>基础语法：</p>
+<pre><code>- 操作符：-&gt;
+- 左侧：参数列表
+- 右侧：执行代码块 / Lambda 体
+</code></pre>
+<p>口诀：</p>
+<ul>
+<li>写死小括号，拷贝右箭头，落地大括号</li>
+<li>左右遇一括号省</li>
+<li>左侧推断类型省</li>
+</ul>
+<p>语法格式：</p>
+<ul>
+<li>无参数，无返回值：() -&gt; sout</li>
+</ul>
+<p>例如 Runnable接口：</p>
+<pre><code>public class Test02 &#123;
+	int num = 10; //jdk 1.7以前 必须final修饰
+    
+    @Test
+    public void test01()&#123;
+        //匿名内部类
+        new Runnable() &#123;
+            @Override
+            public void run() &#123;
+                //在局部类中引用同级局部变量
+                //只读
+                System.out.println(&quot;Hello World&quot; + num);
+            &#125;
+        &#125;;
+    &#125;
+
+    @Test
+    public void test02()&#123;
+        //语法糖
+     	Runnable runnable = () -&gt; &#123;
+         	System.out.println(&quot;Hello Lambda&quot;);
+     	&#125;;
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>有一个参数，无返回值</li>
+</ul>
+<pre><code>@Test
+public void test03()&#123;
+    Consumer&lt;String&gt; consumer = (a) -&gt; System.out.println(a);
+    consumer.accept(&quot;我觉得还行！&quot;);
+&#125;
+</code></pre>
+<ul>
+<li>有一个参数，无返回值 （小括号可以省略不写）</li>
+</ul>
+<pre><code>@Test
+public void test03()&#123;
+    Consumer&lt;String&gt; consumer = a -&gt; System.out.println(a);
+    consumer.accept(&quot;我觉得还行！&quot;);
+&#125;
+</code></pre>
+<ul>
+<li>有两个及以上的参数，有返回值，并且 Lambda 体中有多条语句</li>
+</ul>
+<pre><code>@Test
+public void test04()&#123;
+    Comparator&lt;Integer&gt; comparator = (a, b) -&gt; &#123;
+        System.out.println(&quot;比较接口&quot;);
+        return Integer.compare(a, b);
+    &#125;;
+&#125;
+</code></pre>
+<ul>
+<li>有两个及以上的参数，有返回值，并且 Lambda 体中只有1条语句 （大括号 与 return 都可以省略不写）</li>
+</ul>
+<pre><code>@Test
+public void test04()&#123;
+    Comparator&lt;Integer&gt; comparator = (a, b) -&gt; Integer.compare(a, b);
+&#125;
+</code></pre>
+<ul>
+<li>Lambda 表达式 参数的数据类型可以省略不写 Jvm可以自动进行 “类型推断”</li>
+</ul>
+<p>函数式接口：</p>
+<ul>
+<li>接口中只有一个抽象方法的接口 @FunctionalIterface</li>
+</ul>
+<p>测试：</p>
+<ul>
+<li>定义一个函数式接口：</li>
+</ul>
+<pre><code>@FunctionalInterface
+public interface MyFun &#123;
+
+    Integer count(Integer a, Integer b);
+&#125;
+</code></pre>
+<ul>
+<li>使用</li>
+</ul>
+<pre><code>@Test
+public void test05()&#123;
+    MyFun myFun1 = (a, b) -&gt; a + b;
+    MyFun myFun2 = (a, b) -&gt; a - b;
+    MyFun myFun3 = (a, b) -&gt; a * b;
+    MyFun myFun4 = (a, b) -&gt; a / b;
+&#125;
+</code></pre>
+<ul>
+<li>再使用一次</li>
+</ul>
+<pre><code>public Integer operation(Integer a, Integer b, MyFun myFun)&#123;
+    return myFun.count(a, b);
+&#125;
+
+@Test
+public void test06()&#123;
+    Integer result = operation(1, 2, (x, y) -&gt; x + y);
+    System.out.println(result);
+&#125;
+</code></pre>
+<h4 id="2-4-案例">2.4 案例</h4>
+<p>案例一：调用 Collections.sort() 方法，通过定制排序 比较两个 Employee (先按照年龄比，年龄相同按照姓名比)，使用 Lambda 表达式作为参数传递</p>
+<ul>
+<li>定义实体类</li>
+</ul>
+<pre><code>@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Employee &#123;
+    
+    private Integer id;
+    private String name;
+    private Integer age;
+    private Double salary;
+&#125;
+</code></pre>
+<ul>
+<li>定义 List 传入数据</li>
+</ul>
+<pre><code>List&lt;Employee&gt; emps = Arrays.asList(
+    new Employee(101, &quot;Z3&quot;, 19, 9999.99),
+    new Employee(102, &quot;L4&quot;, 20, 7777.77),
+    new Employee(103, &quot;W5&quot;, 35, 6666.66),
+    new Employee(104, &quot;Tom&quot;, 44, 1111.11),
+    new Employee(105, &quot;Jerry&quot;, 60, 4444.44)
+);
+</code></pre>
+<ul>
+<li>@Test</li>
+</ul>
+<pre><code>@Test
+public void test01()&#123;
+    Collections.sort(emps, (e1, e2) -&gt; &#123;
+        if (e1.getAge() == e2.getAge())&#123;
+            return e1.getName().compareTo(e2.getName());
+        &#125; else &#123;
+            return Integer.compare(e1.getAge(), e2.getAge());
+        &#125;
+    &#125;);
+
+    for (Employee emp : emps) &#123;
+        System.out.println(emp);
+    &#125;
+&#125;
+</code></pre>
+<p>案例二：声明函数式接口，接口中声明抽象方法，String getValue(String str); 声明类 TestLambda，类中编写方法使用接口作为参数，将一个字符串转换成大写，并作为方法的返回值；再将一个字符串的第二个和第四个索引位置进行截取字串（此处练习采用了Function函数接口）</p>
+<pre><code>    @Test
+    public void test3()&#123;
+        Function&lt;String,String&gt; funStr = (x) -&gt; x.toUpperCase();
+        System.out.println(funStr.apply(&quot;abcd&quot;));
+        Function&lt;String,String&gt; funStr1 = (x) -&gt; x.substring(1,2)+x.substring(3,4);
+        System.out.println(funStr1.apply(&quot;abcde&quot;));
+    &#125;
+</code></pre>
+<p>案例三：声明一个带两个泛型的函数式接口，泛型类型为&lt;T, R&gt; T 为参数，R 为返回值；接口中声明对应的抽象方法；在 TestLambda 类中声明方法，使用接口作为参数，计算两个 Long 类型参数的和；在计算两个 Long 类型参数的乘积（此处练习采用了BiFunction函数接口）</p>
+<pre><code>    @Test
+    public void test4()&#123;
+        BiFunction&lt;Long,Long,Long&gt; bicom = (x,y) -&gt; x+y;
+        System.out.println(bicom.apply(new Long(100),new Long(200)));
+
+        BiFunction&lt;Long,Long,Long&gt; bicom2 = (x,y) -&gt; x*y;
+        System.out.println(bicom2.apply(new Long(100),new Long(200)));
+    &#125;
+</code></pre>
+<h3 id="3-函数式接口">3. 函数式接口</h3>
+<p>Java内置四大核心函数式接口：</p>
+<table>
+<thead>
+<tr>
+<th>函数式接口</th>
+<th>参数类型</th>
+<th>返回类型</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer  消费型接口</td>
+<td>T</td>
+<td>void</td>
+<td>对类型为T的对象应用操作：void accept(T t)</td>
+</tr>
+<tr>
+<td>Supplier 提供型接口</td>
+<td>无</td>
+<td>T</td>
+<td>返回类型为T的对象：T get()</td>
+</tr>
+<tr>
+<td>Function&lt;T, R&gt;函数型接口</td>
+<td>T</td>
+<td>R</td>
+<td>对类型为T的对象应用操作，并返回结果为R类型的对象：R apply(T t)</td>
+</tr>
+<tr>
+<td>Predicate断言型接口</td>
+<td>T</td>
+<td>boolean</td>
+<td>确定类型为T的对象是否满足某约束，并返回boolean值：boolean test(T t)</td>
+</tr>
+</tbody>
+</table>
+<p>3.1 消费型接口</p>
+<pre><code>@Test
+public void test01()&#123;
+    //Consumer
+    Consumer&lt;Integer&gt; consumer = (x) -&gt; System.out.println(&quot;消费型接口&quot; + x);
+    //test
+    consumer.accept(100);
+&#125;
+</code></pre>
+<p>3.2 提供型接口</p>
+<pre><code>@Test
+public void test02()&#123;
+    List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; integers = Arrays.asList(1,2,3); 
+    list.addAll(integers);
+    //Supplier&lt;T&gt;
+    Supplier&lt;Integer&gt; supplier = () -&gt; (int)(Math.random() * 10);
+    list.add(supplier.get());
+    System.out.println(supplier);
+    for (Integer integer : list) &#123;
+        System.out.println(integer);
+    &#125;
+&#125;
+</code></pre>
+<p>3.3 函数型接口</p>
+<pre><code>@Test
+public void test03()&#123;
+    //Function&lt;T, R&gt;
+    String oldStr = &quot;abc123456xyz&quot;;
+    Function&lt;String, String&gt; function = (s) -&gt; s.substring(1, s.length()-1);
+    //test
+    System.out.println(function.apply(oldStr));
+&#125;
+</code></pre>
+<p>3.4 断言型接口</p>
+<pre><code>@Test
+public void test04()&#123;
+    //Predicate&lt;T&gt;
+    Integer age = 35;
+    Predicate&lt;Integer&gt; predicate = (i) -&gt; i &gt;= 35;
+    if (predicate.test(age))&#123;
+        System.out.println(&quot;你该退休了&quot;);
+    &#125; else &#123;
+        System.out.println(&quot;我觉得还OK啦&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>3.5 其他接口<br>
+<img src="https://tmps.wyjsjxh.com/202012050656_608.png" alt="其他接口"></p>
+<h1>4. 引用</h1>
+<h2 id="4-1-方法引用">4.1 方法引用</h2>
+<p>定义：若 Lambda 表达式体中的内容已有方法实现，则我们可以使用“方法引用”</p>
+<p>语法格式：</p>
+<ul>
+<li>对象 :: 实例方法</li>
+<li>类 :: 静态方法</li>
+<li>类 :: 实例方法</li>
+</ul>
+<p><strong>对象::实例方法</strong></p>
+<pre><code>@Test
+public void test01()&#123;
+    PrintStream ps = System.out;
+    Consumer&lt;String&gt; con1 = (s) -&gt; ps.println(s);
+    con1.accept(&quot;aaa&quot;);
+
+    Consumer&lt;String&gt; con2 = ps::println;
+    con2.accept(&quot;bbb&quot;);
+&#125;
+
+</code></pre>
+<p>注意：Lambda 表达实体中调用方法的参数列表、返回类型必须和函数式接口中抽象方法保持一致</p>
+<p><strong>类::静态方法</strong></p>
+<pre><code>@Test
+public void test02()&#123;
+    Comparator&lt;Integer&gt; com1 = (x, y) -&gt; Integer.compare(x, y);
+    System.out.println(com1.compare(1, 2));
+
+    Comparator&lt;Integer&gt; com2 = Integer::compare;
+    System.out.println(com2.compare(2, 1));
+&#125;
+</code></pre>
+<p><strong>类::实例方法</strong></p>
+<pre><code>@Test
+public void test03()&#123;
+    BiPredicate&lt;String, String&gt; bp1 = (x, y) -&gt; x.equals(y);
+    System.out.println(bp1.test(&quot;a&quot;,&quot;b&quot;));
+
+    BiPredicate&lt;String, String&gt; bp2 = String::equals;
+    System.out.println(bp2.test(&quot;c&quot;,&quot;c&quot;));
+&#125;
+</code></pre>
+<p>条件：Lambda 参数列表中的第一个参数是方法的调用者，第二个参数是方法的参数时，才能使用 ClassName :: Method</p>
+<h2 id="4-2-构造器引用">4.2 构造器引用</h2>
+<p>格式：</p>
+<ul>
+<li>ClassName :: new</li>
+</ul>
+<pre><code>@Test
+public void test04()&#123;
+    Supplier&lt;List&gt; sup1 = () -&gt; new ArrayList();
+
+    Supplier&lt;List&gt; sup2 = ArrayList::new;
+&#125;
+</code></pre>
+<p>注意：需要调用的构造器的参数列表要与函数时接口中抽象方法的参数列表保持一致</p>
+<h2 id="4-3-数组引用">4.3 数组引用</h2>
+<p>语法：</p>
+<ul>
+<li>Type :: new;</li>
+</ul>
+<h1>5. Stream API</h1>
+<h2 id="5-1-创建">5.1 创建</h2>
+<p>什么是 Stream?</p>
+<p><img src="https://tmps.wyjsjxh.com/202012050656_290.png" alt="什么是Stream"></p>
+<p>Stream的操作步骤：</p>
+<p><img src="https://tmps.wyjsjxh.com/202012050657_851.png" alt="Stream操作三个步骤"></p>
+<p>创建流：（的几种方法如下）</p>
+<pre><code>/**
+* 创建流
+*/
+@Test
+public void test01()&#123;
+    /**
+    * 集合流
+    *  - Collection.stream() 穿行流
+    *  - Collection.parallelStream() 并行流
+    */
+    List&lt;String&gt; list = new ArrayList&lt;&gt;();
+    Stream&lt;String&gt; stream1 = list.stream();
+
+    //数组流
+    //Arrays.stream(array)
+    String[] strings = new String[10];
+    Stream&lt;String&gt; stream2 = Arrays.stream(strings);
+
+    //Stream 静态方法
+    //Stream.of(...)
+    Stream&lt;Integer&gt; stream3 = Stream.of(1, 2, 3);
+
+    //无限流
+    //迭代
+    Stream&lt;Integer&gt; stream4 = Stream.iterate(0, (i) -&gt; ++i+i++);
+    stream4.forEach(System.out::println);
+
+    //生成
+    Stream.generate(() -&gt; Math.random())
+        .limit(5)
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<h4 id="5-2-筛选-切片">5.2 筛选 / 切片</h4>
+<p>中间操作：</p>
+<ul>
+<li>filter：接收 Lambda ，从流中排除某些元素</li>
+<li>limit：截断流，使其元素不超过给定数量</li>
+<li>skip(n)：跳过元素，返回一个舍弃了前n个元素的流；若流中元素不足n个，则返回一个空流；与 limit(n) 互补</li>
+<li>distinct：筛选，通过流所生成的 hashCode() 与 equals() 取除重复元素</li>
+</ul>
+<pre><code>List&lt;Employee&gt; emps = Arrays.asList(
+    new Employee(101, &quot;Z3&quot;, 19, 9999.99),
+    new Employee(102, &quot;L4&quot;, 20, 7777.77),
+    new Employee(103, &quot;W5&quot;, 35, 6666.66),
+    new Employee(104, &quot;Tom&quot;, 44, 1111.11),
+    new Employee(105, &quot;Jerry&quot;, 60, 4444.44)
+);
+
+@Test
+public void test01()&#123;
+    emps.stream()
+        .filter((x) -&gt; x.getAge() &gt; 35)
+        .limit(3) //短路？达到满足不再内部迭代
+        .distinct()
+        .skip(1)
+        .forEach(System.out::println);
+
+&#125;
+</code></pre>
+<p>Stream的中间操作：</p>
+<p><img src="https://tmps.wyjsjxh.com/202012050657_336.png" alt="Stream的中间操作"></p>
+<ul>
+<li>内部迭代：迭代操作由 Stream API 完成</li>
+<li>外部迭代：我们通过迭代器完成</li>
+</ul>
+<h4 id="5-3-映射">5.3 映射</h4>
+<ul>
+<li>map：接收 Lambda ，将元素转换为其他形式或提取信息；接受一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素</li>
+<li>flatMap：接收一个函数作为参数，将流中每一个值都换成另一个流，然后把所有流重新连接成一个流</li>
+</ul>
+<p>map：</p>
+<pre><code>@Test
+public void test02()&#123;
+    List&lt;String&gt; list = Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
+    list.stream()
+        .map((str) -&gt; str.toUpperCase())
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<p>flatMap：</p>
+<pre><code>public Stream&lt;Character&gt; filterCharacter(String str)&#123;
+    List&lt;Character&gt; list = new ArrayList&lt;&gt;();
+    for (char c : str.toCharArray()) &#123;
+        list.add(c);
+    &#125;
+
+    return list.stream();
+&#125;
+
+@Test
+public void test03()&#123;
+    List&lt;String&gt; list = Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
+    Test02 test02 = new Test02();
+    list.stream()
+        .flatMap(test02::filterCharacter)
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<h4 id="5-4-排序">5.4 排序</h4>
+<ul>
+<li>sorted()：自然排序</li>
+<li>sorted(Comparator c)：定制排序</li>
+</ul>
+<p>Comparable：自然排序</p>
+<pre><code>@Test
+public void test04()&#123;
+    List&lt;Integer&gt; list = Arrays.asList(1,2,3,4,5);
+    list.stream()
+        .sorted() //comparaTo()
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<p>Comparator：定制排序</p>
+<pre><code>@Test
+public void test05()&#123;
+    emps.stream()
+        .sorted((e1, e2) -&gt; &#123; //compara()
+            if (e1.getAge().equals(e2.getAge()))&#123;
+                return e1.getName().compareTo(e2.getName());
+            &#125; else &#123;
+                return e1.getAge().compareTo(e2.getAge());
+            &#125;
+        &#125;)
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<h4 id="5-5-查找-匹配">5.5 查找 / 匹配</h4>
+<p>终止操作：</p>
+<ul>
+<li>allMatch：检查是否匹配所有元素</li>
+<li>anyMatch：检查是否至少匹配一个元素</li>
+<li>noneMatch：检查是否没有匹配所有元素</li>
+<li>findFirst：返回第一个元素</li>
+<li>findAny：返回当前流中的任意元素</li>
+<li>count：返回流中元素的总个数</li>
+<li>max：返回流中最大值</li>
+<li>min：返回流中最小值</li>
+</ul>
+<pre><code>public enum Status &#123;
+    FREE, BUSY, VOCATION;
+&#125;
+
+@Test
+public void test01()&#123;
+    List&lt;Status&gt; list = Arrays.asList(Status.FREE, Status.BUSY, Status.VOCATION);
+
+    boolean flag1 = list.stream()
+        .allMatch((s) -&gt; s.equals(Status.BUSY));
+    System.out.println(flag1);
+
+    boolean flag2 = list.stream()
+        .anyMatch((s) -&gt; s.equals(Status.BUSY));
+    System.out.println(flag2);
+
+    boolean flag3 = list.stream()
+        .noneMatch((s) -&gt; s.equals(Status.BUSY));
+    System.out.println(flag3);
+
+    // 避免空指针异常
+    Optional&lt;Status&gt; op1 = list.stream()
+        .findFirst();
+    // 如果Optional为空 找一个替代的对象
+    Status s1 = op1.orElse(Status.BUSY);
+    System.out.println(s1);
+
+    Optional&lt;Status&gt; op2 = list.stream()
+        .findAny();
+    System.out.println(op2);
+
+    long count = list.stream()
+        .count();
+    System.out.println(count);
+&#125;
+</code></pre>
+<h4 id="5-6-归约-收集">5.6 归约 / 收集</h4>
+<ul>
+<li>归约：reduce(T identity, BinaryOperator) / reduce(BinaryOperator) 可以将流中的数据反复结合起来，得到一个值</li>
+<li>收集：collect 将流转换成其他形式；接收一个 Collector 接口的实现，用于给流中元素做汇总的方法</li>
+</ul>
+<p>reduce：</p>
+<pre><code>/**
+* Java：
+*  - reduce：需提供默认值（初始值）
+* Kotlin：
+*  - fold：不需要默认值（初始值）
+*  - reduce：需提供默认值（初始值）
+*/
+@Test
+public void test01()&#123;
+    List&lt;Integer&gt; list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    Integer integer = list.stream()
+        .reduce(0, (x, y) -&gt; x + y);
+    System.out.println(integer);
+&#125;
+</code></pre>
+<p>collect：<br>
+<img src="https://tmps.wyjsjxh.com/202012050657_478.png" alt="Stream的中止操作"></p>
+<pre><code>List&lt;Employee&gt; emps = Arrays.asList(
+    new Employee(101, &quot;Z3&quot;, 19, 9999.99),
+    new Employee(102, &quot;L4&quot;, 20, 7777.77),
+    new Employee(103, &quot;W5&quot;, 35, 6666.66),
+    new Employee(104, &quot;Tom&quot;, 44, 1111.11),
+    new Employee(105, &quot;Jerry&quot;, 60, 4444.44)
+);
+
+@Test
+public void test02()&#123;
+    //放入List
+    List&lt;String&gt; list = emps.stream()
+        .map(Employee::getName)
+        .collect(Collectors.toList()); 
+    list.forEach(System.out::println);
+    
+	//放入Set
+    Set&lt;String&gt; set = emps.stream()
+        .map(Employee::getName)
+        .collect(Collectors.toSet());
+    set.forEach(System.out::println);
+
+    //放入LinkedHashSet
+    LinkedHashSet&lt;String&gt; linkedHashSet = emps.stream()
+        .map(Employee::getName)
+        .collect(Collectors.toCollection(LinkedHashSet::new));
+    linkedHashSet.forEach(System.out::println);
+&#125;
+
+@Test
+public void test03()&#123;
+    //总数
+    Long count = emps.stream()
+        .collect(Collectors.counting());
+    System.out.println(count);
+
+    //平均值
+    Double avg = emps.stream()
+        .collect(Collectors.averagingDouble(Employee::getSalary));
+    System.out.println(avg);
+
+    //总和
+    Double sum = emps.stream()
+        .collect(Collectors.summingDouble(Employee::getSalary));
+    System.out.println(sum);
+
+    //最大值
+    Optional&lt;Employee&gt; max = emps.stream()
+        .collect(Collectors.maxBy((e1, e2) -&gt; Double.compare(e1.getSalary(), e2.getSalary())));
+    System.out.println(max.get());
+
+    //最小值
+    Optional&lt;Double&gt; min = emps.stream()
+        .map(Employee::getSalary)
+        .collect(Collectors.minBy(Double::compare));
+    System.out.println(min.get());
+&#125;
+
+@Test
+public void test04()&#123;
+    //分组
+    Map&lt;Integer, List&lt;Employee&gt;&gt; map = emps.stream()
+        .collect(Collectors.groupingBy(Employee::getId));
+    System.out.println(map);
+
+    //多级分组
+    Map&lt;Integer, Map&lt;String, List&lt;Employee&gt;&gt;&gt; mapMap = emps.stream()
+        .collect(Collectors.groupingBy(Employee::getId, Collectors.groupingBy((e) -&gt; &#123;
+            if (e.getAge() &gt; 35) &#123;
+                return &quot;开除&quot;;
+            &#125; else &#123;
+                return &quot;继续加班&quot;;
+            &#125;
+        &#125;)));
+    System.out.println(mapMap);
+    
+    //分区
+    Map&lt;Boolean, List&lt;Employee&gt;&gt; listMap = emps.stream()
+        .collect(Collectors.partitioningBy((e) -&gt; e.getSalary() &gt; 4321));
+    System.out.println(listMap);
+&#125;
+
+@Test
+public void test05()&#123;
+    //总结
+    DoubleSummaryStatistics dss = emps.stream()
+        .collect(Collectors.summarizingDouble(Employee::getSalary));
+    System.out.println(dss.getMax());
+    System.out.println(dss.getMin());
+    System.out.println(dss.getSum());
+    System.out.println(dss.getCount());
+    System.out.println(dss.getAverage());
+    
+    //连接
+    String str = emps.stream()
+        .map(Employee::getName)
+        .collect(Collectors.joining(&quot;-&quot;)); //可传入分隔符
+    System.out.println(str);
+&#125;
+
+</code></pre>
+<h4 id="5-7-案例">5.7 案例</h4>
+<p>案例一：给定一个数字列表，如何返回一个由每个数的平方构成的列表呢？(如：给定【1，2，3，4，5】，返回【1，4，9，16，25】)</p>
+<pre><code>@Test
+public void test01()&#123;
+    List&lt;Integer&gt; list = Arrays.asList(1, 2, 3, 4, 5);
+    list.stream()
+        .map((x) -&gt; x * x)
+        .forEach(System.out::println);
+&#125;
+</code></pre>
+<p>案例二：怎样使用 map 和 reduce 数一数流中有多少个 Employee 呢？</p>
+<pre><code>List&lt;Employee&gt; emps = Arrays.asList(
+    new Employee(101, &quot;Z3&quot;, 19, 9999.99),
+    new Employee(102, &quot;L4&quot;, 20, 7777.77),
+    new Employee(103, &quot;W5&quot;, 35, 6666.66),
+    new Employee(104, &quot;Tom&quot;, 44, 1111.11),
+    new Employee(105, &quot;Jerry&quot;, 60, 4444.44)
+);
+
+@Test
+public void test02()&#123;
+    Optional&lt;Integer&gt; result = emps.stream()
+        .map((e) -&gt; 1)
+        .reduce(Integer::sum);
+    System.out.println(result.get());
+</code></pre>
+<h4 id="5-8-并行流">5.8 并行流</h4>
+<ul>
+<li>并行流：就是把一个内容分成几个数据块，并用不同的线程分别处理每个数据块的流</li>
+<li>Java 8 中将并行进行了优化，我们可以很容易的对数据进行操作；Stream API 可以声明性地通过 parallel() 与 sequential() 在并行流与串行流之间切换</li>
+</ul>
+<p>Fork / Join 框架：<br>
+<img src="https://tmps.wyjsjxh.com/202012050658_64.png" alt="Fork / Join 框架"><br>
+Fork / Join 框架与传统线程池的区别：<br>
+<img src="https://tmps.wyjsjxh.com/202012050658_349.png" alt="Fork / Join 框架与传统线程池的区别"><br>
+Fork / Join 实现：</p>
+<pre><code>public class ForkJoinCalculate extends RecursiveTask&lt;Long&gt; &#123;
+
+    private static final long serialVersionUID = 1234567890L;
+
+    private long start;
+    private long end;
+
+    private static final long THRESHPLD = 10000;
+
+    public ForkJoinCalculate(long start, long end) &#123;
+        this.start = start;
+        this.end = end;
+    &#125;
+
+    @Override
+    protected Long compute() &#123;
+        long length = end - start;
+
+        if (length &lt;= THRESHPLD) &#123;
+            long sum = 0;
+            for (long i = start; i &lt;= end; i++) &#123;
+                sum += i;
+            &#125;
+        &#125; else &#123;
+            long middle = (start + end) / 2;
+
+            ForkJoinCalculate left = new ForkJoinCalculate(start, end);
+            left.fork(); //拆分子任务 压入线程队列
+
+            ForkJoinCalculate right = new ForkJoinCalculate(middle + 1, end);
+            right.fork();
+
+            return left.join() + right.join();
+        &#125;
+
+        return null;
+    &#125;
+&#125;
+
+public class TestForkJoin &#123;
+
+    /**
+     * ForkJoin 框架
+     */
+    @Test
+    public void test01()&#123;
+        Instant start = Instant.now();
+
+        ForkJoinPool pool = new ForkJoinPool();
+        ForkJoinCalculate task = new ForkJoinCalculate(0, 100000000L);
+
+        Long sum = pool.invoke(task);
+        System.out.println(sum);
+
+        Instant end = Instant.now();
+        System.out.println(Duration.between(start, end).getNano());
+    &#125;
+
+    /**
+     * 普通 for循环
+     */
+    @Test
+    public void test02()&#123;
+        Instant start = Instant.now();
+
+        Long sum = 0L;
+        for (long i = 0; i &lt; 100000000L; i++) &#123;
+            sum += i;
+        &#125;
+
+        Instant end = Instant.now();
+        System.out.println(Duration.between(start, end).getNano());
+    &#125;
+&#125;
+</code></pre>
+<p>Java 8 并行流 / 串行流：</p>
+<pre><code>@Test
+public void test03()&#123;
+    //串行流(单线程)：切换为并行流 parallel()
+    //并行流：切换为串行流 sequential()
+    LongStream.rangeClosed(0, 100000000L)
+        .parallel() //底层：ForkJoin
+        .reduce(0, Long::sum);
+
+&#125;
+</code></pre>
+<h4 id="时间戳与重复注解部分暂时未深入了解">时间戳与重复注解部分暂时未深入了解</h4>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/18/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  算法题
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'yMtzAu8Sr6IMjXhNwuSeOn0O-gzGzoHsz',
+			appKey: 'Mn9RedjdJ4qXHNcSo2nDxmz4',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Mzx</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="#" target="_blank">Tree</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		现在谈大数据，Hadoop已经过时？ | 
+	 
+	Rome
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="分享者的blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "demo.wyjsjxh.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Rome</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="https://github.com/xmg520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%BF%B0/">
+										数据结构概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E7%AE%97%E6%B3%95%E9%A2%98/">
+										算法题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Java
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/02%20Java/%E5%9F%BA%E7%A1%80/Java%208%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+										Java 8 学习笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										手撕SpringBoot
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/02%20Java/%E6%89%8B%E6%92%95SpringBoot/SpringBoot%E6%B3%A8%E9%87%8A%E5%AD%A6%E4%B9%A0/">
+										SpringBoot注释学习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/02%20Java/%E6%89%8B%E6%92%95SpringBoot/springboot%E4%BD%BF%E7%94%A8CORS%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+										springboot使用CORS解决跨域问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Python
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Flask
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/03%20Python/Flask/Flask+Echarts%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96(%E4%B8%80)/">
+										Flask+Echarts实现数据可视化(一)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/03%20Python/%E5%9F%BA%E7%A1%80/Python%E4%B8%AD%E7%9A%84Base64%E7%BC%96%E7%A0%81%E7%9A%84%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">
+										Python中的Base64编码的加密与解密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 前端
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Vue
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/04%20%E5%89%8D%E7%AB%AF/Vue/Axios%E8%AF%B7%E6%B1%82SpringBoot%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E9%94%99%E8%AF%AF/">
+										Axios请求SpringBoot后端接口错误
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E5%AE%89Tomcat%E9%95%9C%E5%83%8F/">
+										Docker安Tomcat镜像
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E5%AE%89%E8%A3%85Anaconda3%E5%B9%B6%E5%BC%80%E5%90%AFjupyter%20Notebook/">
+										Docker安装Anaconda3并开启jupyter Notebook
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Docker%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F/">
+										Docker配置阿里云镜像加速
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Dokcer%E5%AE%89%E8%A3%85Mysql5.7/">
+										Dokcer安装Mysql5.7
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 随笔
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/06%20%E9%9A%8F%E7%AC%94/%E3%80%8A%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E7%9A%84%E4%B8%8D%E5%B9%B8%E3%80%8B-%E7%8E%8B%E5%B0%8F%E6%B3%A2/">
+										《知识分子的不幸》-王小波
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/18/06%20%E9%9A%8F%E7%AC%94/%E7%8E%B0%E5%9C%A8%E8%B0%88%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8CHadoop%E5%B7%B2%E7%BB%8F%E8%BF%87%E6%97%B6%EF%BC%9F/">
+										现在谈大数据，Hadoop已经过时？
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 面试题与其他
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试题
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%85%B6%E4%BB%96/CSS%E6%96%87%E5%AD%97%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%80%E8%A1%8C%EF%BC%8C%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/">
+										CSS文字只显示一行，超出显示省略号
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%85%B6%E4%BB%96/%E7%96%AF%E7%8B%82%E7%9A%84%E5%B0%8F%E9%B8%9FGreenfoot%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C/">
+										疯狂的小鸟Greenfoot游戏制作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										前端
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/18/07%20%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B8%8E%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF/HTML%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										HTML常见面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	现在谈大数据，Hadoop已经过时？
+</h1>
+<div class="article-meta">
+	
+	<span>Mzx</span>
+	<span>2021-04-18 17:18:01</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<p>导读：原先支持Hadoop的四大商业机构纷纷宣布支持Spark，包含知名Hadoop解决方案供应商Cloudera和知名的Hadoop供应商MapR。<br>
+现在再写这篇文章感觉有些不合时宜，目前，貌似很少人再讨论大数据，也很少人再讨论hadoop。整理这篇文章，是为了探寻新的技术方向。</p>
+<p>先来看看几篇讨论文章(有删减)：</p>
+<p>Hadoop是否已死，Spark称霸</p>
+<p>由于Hadoop的MapReduce高延迟的死穴，导致Hadoop无力处理很多对时间有要求的场景，人们对其批评越来越多，Hadoop无力改变现在而导致正在死亡。</p>
+<p>原先支持Hadoop的四大商业机构纷纷宣布支持Spark，包含知名Hadoop解决方案供应商Cloudera和知名的Hadoop供应商MapR。</p>
+<p>Mahout将不再接受任何形式的以MapReduce形式实现的算法，另外一方面，Mahout宣布新的算法基于Spark</p>
+<p>Cloudera的机器学习框架Oryx的执行引擎也将由Hadoop的MapReduce替换成Spark</p>
+<p>Google已经开始将负载从MapReduce转移到Pregel和Dremel上</p>
+<p>FaceBook则将负载转移到Presto上</p>
+<p>Hadoop为何不改进自己?</p>
+<p>Hadoop的改进基本停留在代码层次，也就是修修补补的事情，这就导致了Hadoop现在具有深度的“技术债务”，负载累累;</p>
+<p>Hadoop本身的计算模型决定了Hadoop上的所有工作都要转化成Map、Shuffle和Reduce等核心阶段，由于每次计算都要从磁盘读或者写数据，同时真个计算模型需要网络传输，这就导致了越来越不能忍受的延迟性，同时在前一个任务运行完之前，任何一个任务都不可以运行，这直接导致了其无力支持交互式应用;</p>
+<p>那么，为什么不全部重新写一个更好的Hadoop呢?答案是Spark的出现使得没有必要这样做了。</p>
+<p>Spark是继Hadoop之后，成为替代Hadoop的下一代云计算大数据核心技术，目前Spark已经构建了自己的整个大数据处理生态系统，如流处理、图技术、机器学习、NoSQL查询等方面都有自己的技术，并且是Apache Project。</p>
+<p>为什么需要Spark?</p>
+<p>Spark是可以革命Hadoop的目前替代者，能够做Hadoop做的一切事情，同时速度比Hadoop快了100倍以上。不得不提的是Spark的“One stack to rule them all”的特性，Spark的特点之一就是用一个技术堆栈解决云计算大数据中流处理、图技术、机器学习、交互式查询、误差查询等所有的问题。只需要一个技术团队通过Spark就可以搞定一切问题，而如果基于Hadoop就需要分别构建实时流处理团队、数据统计分析团队、数据挖掘团队等，而且这些团队之间无论是代码还是经验都不可相互借鉴，会形成巨大的成本，而使用Spark就不存在这个问题。</p>
+<p>上面的文章极力的推崇Spark，我们来用数据对比下Hadoop和Spark。以下为Google Trends关于Hadoop的全球搜索趋势，从图上看，确实Hadoop从2015年开始，关注度在每况日下。</p>
+<p>以下为Apache Spark的搜索趋势数据，从趋势看也是呈下降趋势，但下降的幅度没有Hadoop的快。</p>
+<p>Hadoop的现状与未来</p>
+<p>Hadoop这个单词如今铺天盖地，几乎成了大数据的代名词。仅仅数年时间，Hadoop从边缘技术迅速成长为一个事实标准。如今想玩转大数据，搞企业分析或者商业智能，没有Hadoop还真不行。但Hadoop狂热的背后却酝酿着一场技术变革，Hadoop的核心技术在Google那里已经过时，因为Hadoop并不擅长处理“快数据”。今天，Hadoop似乎已经毫无争议地成了企业大数据技术标准，看上去Hadoop将根植企业，其地位在未来十年似乎都不会动摇。企业真的会为一个盛极而衰的技术买单吗?</p>
+<p>起源：Google File System(GFS)和Google MapReduce</p>
+<p>为了迎接数据大爆炸的挑战，Google的工程师Jeff Dean和Sanjay Ghemawat架构了两个影响深远的系统：Google File System(GFS)和Google MapReduce(GMR)。前者是一个能在通用硬件上管理EB(Exabyte)级数据的出色的可行方案。后者则是一个能在通用服务器上针对上述EB级数据进行大规模并行处理数据的模型设计实现。GMR和GFS成了Google搜索引擎数据处理引擎的核心，该引擎抓取、分析并分级web页面，并最终为用户呈现日常搜索结果。Apache Hadoop的两大组成部分：Hadoop分布式文件系统和Hadoop，确实就是GFS和GMR的翻版。虽然Hadoop正在发展成为一个无所不包的数据管理和处理生态系统，但是在这个生态系统的核心，依然是MapReduce系统。所有的数据和应用最终都将降解为Map和Reduce的工作。</p>
+<p>Google已经进化，Hadoop能否跟上?</p>
+<p>有趣的事情是，GMR已经不再占据Google软件堆栈中的显赫位置。当企业被Hadoop解决方案锁定到MapReduce上时，Google却已经准备淘汰MapReduce技术。虽然Apache项目和Hadoop商业发行版本试图通过HBase、Hive和下一代MapReduce(亦即YARN)弥补Hadoop的短板。但笔者认为只有用全新的，非MapReduce架构的技术替代Hadoop内核(HDFS和Zookeeper)才能与谷歌的技术抗衡。(这里有一个更加技术性的阐述： gluecon-miller-horizon )</p>
+<p>增量索引过滤器(Percolator for incremental indexing) 和频繁变化数据集分析。Hadoop是一台大型“机器”，当启动并全速运转时处理数据的性能惊人，你需要操心的就是硬盘的传输速度跟不上。但是每次你准备启动分析数据时，都需要把所有的数据都过一遍，当数据集越来越庞大时，这个问题将导致分析时间无限延长。Google是如何解决让搜索结果返回速度越来越接近实时的呢?答案是用增量处理引擎Percolator代替GMR。通过只处理新增的、改动过的或删除的文档和使用二级指数来高效率建目录，返回查询结果。Percolator论文的作者写道：“将索引系统转换成增量系统…将文档处理延迟缩短了100倍。”这意味着索引web新内容的速度比用MapReduce快100倍!</p>
+<p>用于点对点分析的Dremel 。Google和Hadoop生态系统都致力于让MapReduce成为可用的点对点分析工具。从Sawzall到Pig和Hive，创建了大量的界面层，但是尽管这让Hadoop看上去更像SQL系统，但是人们忘记了一个基本事实——MapReduce(以及Hadoop)是为组织数据处理任务开发的系统，诞生于工作流内核，而不是点对点分析。今天有大量的BI/分析查询都是点对点模式，属于互动和低延迟的分析。Hadoop的Map和Reduce工作流让很多分析师望而却步，而且工作启动和完成工作流运行的漫长周期对于很多互动性分析来说意味着糟糕的用户体验。于是，Google发明了Dremel(业界也称之为BigQuery产品)专用工具，可以让分析师数秒钟内就扫描成PB(Petabyte)的数据完成点到点查询，而且还能支持可视化。Google在Dremel的论文中声称：“Dremel能够在数秒内完成数万亿行数据的聚合查询，比MapReduce快上100倍!”</p>
+<p>分析图数据的Pregel 。Google MapReduce的设计初衷是分析世界上较大的数据图谱——互联网。但是在分析人际网络、电信设备、文档和其他一些图数据时就没有那么灵光了，例如MapReduce在计算单源短路径(SSSP)时效率非常低下，已有的并行图算法库Parallel BGL或者CGMgraph又没有容错。于是Google开发了Pregel，一个可以在分布式通用服务器上处理PB级别图数据的大型同步处理应用。与Hadoop经常在处理图数据时产生指数级数据放大相比，Pregel能够自然高效地处理SSSP或PageRank等图算法，所用时间要短得多，代码也简洁得多。目前能与Pregel媲美的开源选择是 Giraph ，这是一个早期的Apache孵化项目，调用了HDFS和Zookeeper。Github上还有一个项目 Golden Orb 可用。</p>
+<p>总结</p>
+<p>总而言之，Hadoop是一个可以在普通通用硬件集群上进行大规模数据处理的优秀工具。但是如果你希望处理动态数据集、点对点分析或者图数据结构，那么Google已经为我们展示了大大优于MapReduce范型的技术选择。毫无疑问，Percolator、Dremel和Pregel将成为大数据的新“三巨头”，正如Google的老“三巨头”：GFS、GMR和BigTable所做的那样。</p>
+<p>对于Google来说，Hadoop背后代表的技术已被淘汰。取而代之的是新的技术。</p>
+<p>Google后Hadoop时代的新“三驾马车”——Caffeine、Pregel、Dremel</p>
+<p>Hadoop的火爆要得益于Google在2003年底和2004年公布的两篇研究论文，其中一份描述了 GFS(Google File System) ，GFS是一个可扩展的大型数据密集型应用的分布式文件系统，该文件系统可在廉价的硬件上运行，并具有可靠的容错能力，该文件系统可为用户提供极高的计算性能，而同时具备小的硬件投资和运营成本。另外一篇则描述了 MapReduce ，MapReduce是一种处理大型及超大型数据集并生成相关执行的编程模型。其主要思想是从函数式编程语言里借来的，同时也包含了从矢量编程语言里借来的特性。基于MapReduce编写的程序是在成千上万的普通PC机上被并行分布式自动执行的。</p>
+<p>8年后，Hadoop已经被广泛使用在网络上，并涉及数据分析和各类数学运算任务。但Google却提出更好的技术。在2009年，网络巨头开始使用新的技术取代GFS和MapReduce。Mike Olson表示“这些技术代表未来的趋势。如果你想知道大规模、高性能的数据处理基础设施的未来趋势如何，我建议你看看Google即将推出的研究论文”。</p>
+<p>Caffeine</p>
+<p>自Hadoop兴起以来，Google已经发布了三篇研究论文，主要阐述了基础设施如何支持庞大网络操作。其中一份详细描述了Caffeine，Caffeine主要为Google网络搜索引擎提供支持。在Google采用Caffeine之前，Google使用MapReduce和分布式文件系统(如GFS)来构建搜索索引(从已知的Web页面索引中)。在2010年，Google搜索引擎发生了重大变革。Google将其搜索迁移到新的软件平台，他们称之为“Caffeine”。Caffeine是Google出自自身的设计，Caffeine使Google能够更迅速的添加新的链接(包括新闻报道以及博客文章等)到自身大规模的网站索引系统中，相比于以往的系统，新系统可提供“50%新生”的搜索结果。在本质上Caffeine丢弃MapReduce转而将索引放置在由Google开发的分布式数据库BigTable上。作为Google继GFS和MapReduce两项创新后的又一项创新，其在设计用来针对海量数据处理情形下的管理结构型数据方面具有巨大的优势。这种海量数据可以定义为在云计算平台中数千台普通服务器上PB级的数据。</p>
+<p>Pregel</p>
+<p>Pregel是一个图形数据库，主要用于绘制大量网上信息之间关系。而更吸引人的是另外一个在论文中被称之为Dremel的工具。</p>
+<p>Dremel</p>
+<p>Dremel是一种分析信息的方式，Dremel可跨越数千台服务器运行，允许“查询”大量的数据。这类似于使用SQL对传统关系数据库进行分析。区别在于Dremel可以在极快的速度处理网络规模的海量数据。据Google提交的文件显示你可以在几秒的时间处理PB级的数据查询。</p>
+<p>目前Hadoop已经提供了在庞大数据集上运行类似SQL的查询工具(如Hadoop生态圈中的项目Pig和Hive)。但其会有一些延迟，原因是其是“批处理”平台，提交一个任务后需要几分钟或几小时时间才能完成，虽然可以得到查询结果，但相比于Pig和Hive，Dremel几乎是瞬时的。Dremel 是专门为即时查询而设计的。Dremel可在大约3秒钟时间里处理1PB的数据查询请求。</p>
+<p>Cloudera的Mike Olson表示尽管Hadoop取得的成功不容置疑，但构建Hadoop生态圈的公司和企业显然慢了，而同样的情况也出现在Dremel上，Google在2010年公布了Dremel的相关文档，但这个文档还没有被第三方企业充分利用起来，目前以色列的工程团队正在建设被称为OpenDremel的克隆平台。</p>
+<p>备注： Apache Drill 和Apache Impala的思想来自于Dremel。</p>
+<p>Hype Cycle for Data Management, 2017</p>
+<p>知名IT研究与顾问咨询公司Gartner发布的《2017年数据管理技术成熟度曲线》，报告用极其显眼的红色标识出Hadoop在到达“生产成熟期”之前即被淘汰。</p>
+<p>除此之外，Gartner的调查还揭示了Hadoop使用量的下滑，Gartner还预测，到2018年，70%的Hadoop部署将无法实现节约成本和收入增长的目标，主要原因是技能不足和技术整合困难。</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/18/06%20%E9%9A%8F%E7%AC%94/%E3%80%8A%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E7%9A%84%E4%B8%8D%E5%B9%B8%E3%80%8B-%E7%8E%8B%E5%B0%8F%E6%B3%A2/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  《知识分子的不幸》-王小波
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/04/18/05%20%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/Dokcer%E5%AE%89%E8%A3%85Mysql5.7/">
+                Docker
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'yMtzAu8Sr6IMjXhNwuSeOn0O-gzGzoHsz',
+			appKey: 'Mn9RedjdJ4qXHNcSo2nDxmz4',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Mzx</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="#" target="_blank">Tree</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
